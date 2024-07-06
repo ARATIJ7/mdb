@@ -1,7 +1,7 @@
 # ec2.tf
 resource "aws_instance" "mongodb_instance1" {
   provider = aws.region1
-  ami = "ami-0c55b159cbfafe1f0"  # Replace with your AMI ID
+  ami = "ami-024ebc7de0fc64e44"  # Replace with your AMI ID
   instance_type = var.instance_type
   key_name = var.key_name
   security_groups = [aws_security_group.mongodb_sg1.name]
@@ -22,7 +22,7 @@ resource "aws_instance" "mongodb_instance1" {
 
 resource "aws_instance" "mongodb_instance2" {
   provider = aws.region2
-  ami = "ami-0c55b159cbfafe1f0"  # Replace with your AMI ID
+  ami = "ami-024ebc7de0fc64e44"  # Replace with your AMI ID
   instance_type = var.instance_type
   key_name = var.key_name
   security_groups = [aws_security_group.mongodb_sg2.name]
