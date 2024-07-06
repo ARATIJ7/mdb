@@ -22,7 +22,7 @@ resource "aws_instance" "mongodb_instance1" {
 
 resource "aws_instance" "mongodb_instance2" {
   provider = aws.region2
-  ami = "ami-0862be96e41dcbf74"  # Replace with your AMI ID
+  ami = "ami-0075013580f6322a1"  # Replace with your AMI ID
   instance_type = var.instance_type
   key_name = var.key_name
   vpc_security_group_ids = [aws_security_group.mongodb_sg2.id]
