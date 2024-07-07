@@ -1,11 +1,10 @@
-# ec2.tf
 resource "aws_instance" "mongodb_instance1" {
-  provider = aws.region1
-  ami = "ami-003932de22c285676"  # Replace with your AMI ID
-  instance_type = var.instance_type
-  key_name = var.key_name
-  vpc_security_group_ids = [aws_security_group.mongodb_sg1.id]
-  subnet_id = aws_subnet.subnet1.id
+  provider                  = aws.region1
+  ami                       = "ami-003932de22c285676"  # Replace with your AMI ID
+  instance_type             = var.instance_type
+  key_name                  = var.key_name
+  vpc_security_group_ids    = [aws_security_group.mongodb_sg1.id]
+  subnet_id                 = aws_subnet.subnet1.id
 
   user_data = <<-EOF
               #!/bin/bash
@@ -21,12 +20,12 @@ resource "aws_instance" "mongodb_instance1" {
 }
 
 resource "aws_instance" "mongodb_instance2" {
-  provider = aws.region2
-  ami = "ami-0075013580f6322a1"  # Replace with your AMI ID
-  instance_type = var.instance_type
-  key_name = var.key_name
-  vpc_security_group_ids = [aws_security_group.mongodb_sg2.id]
-  subnet_id = aws_subnet.subnet2.id
+  provider                  = aws.region2
+  ami                       = "ami-0075013580f6322a1"  # Replace with your AMI ID
+  instance_type             = var.instance_type
+  key_name                  = var.key_name
+  vpc_security_group_ids    = [aws_security_group.mongodb_sg2.id]
+  subnet_id                 = aws_subnet.subnet2.id
 
   user_data = <<-EOF
               #!/bin/bash
