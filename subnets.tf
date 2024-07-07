@@ -13,7 +13,7 @@ resource "aws_subnet" "subnet2" {
   provider           = aws.region2
   vpc_id             = aws_vpc.vpc2.id
   cidr_block         = "10.1.1.0/24"
-  availability_zone  = "us-east-1a"
+  availability_zone  = "us-east-2a"
 
   tags = {
     Name = "subnet2"
