@@ -5,6 +5,7 @@ resource "aws_instance" "mongodb_instance1" {
   key_name                  = var.key_name
   vpc_security_group_ids    = [aws_security_group.mongodb_sg1.id]
   subnet_id                 = aws_subnet.subnet1.id
+  associate_public_ip_address = true
 
   user_data = <<-EOF
               #!/bin/bash
@@ -26,6 +27,7 @@ resource "aws_instance" "mongodb_instance2" {
   key_name                  = var.key_name
   vpc_security_group_ids    = [aws_security_group.mongodb_sg2.id]
   subnet_id                 = aws_subnet.subnet2.id
+  associate_public_ip_address = true
 
   user_data = <<-EOF
               #!/bin/bash
