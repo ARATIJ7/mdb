@@ -14,3 +14,11 @@ variable "instance_type" {
 variable "key_name" {
   description = "project"
 }
+
+variable "replica_set_name" {
+  description = "MongoDB replica set name"
+  type        = string
+  default     = "rs0"
+}
+
+
